@@ -1,23 +1,44 @@
 .chat
+
   .chat-side
     .chat-side__header
       %h5
         onoro
         .font-awesome
-          = link_to "/", class: "font-awesome__specific" do
+          = link_to root_path, class: "font-awesome__specific" do
             %i{class: "fa fa-pencil-square-o"}
-          = link_to "/", class: "font-awesome__specific" do
+          = link_to root_path, class: "font-awesome__specific" do
             %i{class: "fa fa-cog"}
-    .group__list
-      fair
-  .right-side
-    .header
-      .group__name
-        fair
-      .group__members
-        Members: onoro china
-    .main
-      onoro
-      こんにちわ
-    .footer
+    .group
+      .group__list
+        .group__name
+          fair
+        .group__message
+          メッセージはありません
+  .chat-main
+    .chat-header
+      .chat-header__left
+        %h2
+          fair
+        %p.chat-header__members
+          Members: onoro china
+      .chat-header__right
+        = link_to "Edit", root_path, class: "chat-header__edit"
+    .chat-body
+      %ul.chat-messages
+        %li.chat-message
+          .chat-message__header
+            %p.chat-message__user
+              onoro
+            %p.chat-message__date
+              2016/3/13 00:00:00
+            %p.chat-message__text
+              こんにちわ
+    .chat-footer
+      .chat-footer__form
+        Type a message
+        = link_to root_path, class: "font-awesome__icon" do
+          %i{class: "fa fa-file-image-o"}
 
+      .chat-footer__submit
+        send

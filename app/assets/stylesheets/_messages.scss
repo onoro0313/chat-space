@@ -131,29 +131,37 @@ html,body{
     }
   }
   .chat-footer{
-    position: absolute;
+    // position: absolute;
     background-color: #ddd;
     height:50px;
     width: 1060px;
     padding: 20px 40px;
-    .chat-footer__form{
-      background-color:#fff;
-      float:left;
-      width: calc(100% - 130px);
-      height:50px;
-      color:#434a54;
-      font-size:14px;
-      line-height:50px;
-      padding-left:10px;
-      .font-awesome__icon{
-        font-size: 16px;
-        float:right;
-        margin-right:10px;
+    &__form{
+      .chat-footer__input{
+        background-color:#fff;
+        float:left;
+        width: calc(100% - 130px);
+        height:50px;
+        color:#434a54;
+        font-size:14px;
+        line-height:50px;
+        padding-left:10px;
+      .file{
+        i.fa{
+          float:right;
+          line-height:50px;
+        }
+        .file-picture{
+          display:none;
+          width:20px;
+          height:20px;
+        }
       }
     }
-    .chat-footer__submit{
+  }
+    &__submit{
       float:right;
-      width:105px;
+      width:100px;
       height:50px;
       color: #fff;
       background-color: #38aef0;
@@ -162,4 +170,5 @@ html,body{
     }
   }
 }
+
 

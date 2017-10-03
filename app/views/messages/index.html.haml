@@ -35,10 +35,10 @@
             %p.chat-message__text
               こんにちわ
     .chat-footer
-      .chat-footer__form
-        Type a message
-        = link_to root_path, class: "font-awesome__icon" do
-          %i{class: "fa fa-file-image-o"}
+      %form{:class => "chat-footer__form", :action => "/", :method => "get"}
+        %input{:class => "chat-footer__input",:type => "text",:placeholder => "Type a message"}
+        %label{:class => "file"}
+          %i{:class => "fa fa-picture-o"}
+          %input{:class => "file-picture",:type => "file",:name => "file",:style =>"display:none"}
+        %input{:class => "chat-footer__submit",:type => "submit",:value => "Send"}
 
-      .chat-footer__submit
-        send

@@ -146,10 +146,10 @@ html,body{
         font-size:14px;
         line-height:50px;
         padding-left:10px;
-      .file{
-        i.fa{
-          float:right;
+      }
+        .file__icon{
           line-height:50px;
+          margin-left:-35px;
         }
         .file-picture{
           display:none;
@@ -158,8 +158,7 @@ html,body{
         }
       }
     }
-  }
-    &__submit{
+    .chat-footer__submit{
       float:right;
       width:100px;
       height:50px;
@@ -169,6 +168,6 @@ html,body{
       line-height:50px;
     }
   }
-}
+
 
 

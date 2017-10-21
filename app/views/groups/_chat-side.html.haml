@@ -1,0 +1,16 @@
+.chat-side
+  .chat-side__header
+    %h5
+      = current_user.name
+      .font-awesome
+        = link_to root_path, class: "font-awesome__specific" do
+          %i{class: "fa fa-pencil-square-o"}
+        = link_to edit_user_registration_path, class: "font-awesome__specific" do
+          %i{class: "fa fa-cog"}
+  .group
+    %ul.group__list
+      - @groups.each do |group|
+        %li.group__name
+          = group.group_name
+          .group__message
+            メッセージはありません

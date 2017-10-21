@@ -35,11 +35,12 @@ html,body{
 .group{
   background-color: #2f3e51;
   height: calc(100vh - 100px);
-  &__list{
+    &__list{
     margin: 0px 20px;
     padding-top: 20px;
-  }
+    }
     &__name{
+      margin: 45px 0px;
       font-size: 15px;
       color: #FFFFFF;
     }

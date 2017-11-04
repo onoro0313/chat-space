@@ -20,21 +20,25 @@
     .chat-header
       .chat-header__left
         %h2
-          fair
+          = @group.group_name
         %p.chat-header__members
-          Members: onoro china
+          Members:
+          - @group.users.each do |user|
+            = user.name
       .chat-header__right
         = link_to "Edit", root_path, class: "chat-header__edit"
     .chat-body
-      %ul.chat-messages
-        %li.chat-message
-          .chat-message__header
-            %p.chat-message__user
-              onoro
-            %p.chat-message__date
-              2016/3/13 00:00:00
-            %p.chat-message__text
-              こんにちわ
+      - if @messages
+        = render partial: 'messages/message', local: @messages
+      / %ul.chat-messages
+      /   %li.chat-message
+      /     .chat-message__header
+      /       %p.chat-message__user
+      /         = current_user.name
+      /       %p.chat-message__date
+      /         = @messages.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      /       %p.chat-message__text
+      /         = @messages.body
     .chat-footer
       = form_for [@group, @message] do |f|
         .chat-footer__form

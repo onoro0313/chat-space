@@ -26,7 +26,7 @@
           - @group.users.each do |user|
             = user.name
       .chat-header__right
-        = link_to "Edit", root_path, class: "chat-header__edit"
+        = link_to "Edit", edit_group_path(@group), class: "chat-header__edit"
     .chat-body
       - if @messages
         = render partial: 'messages/message', local: @messages

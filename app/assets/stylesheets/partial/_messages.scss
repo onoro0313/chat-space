@@ -43,6 +43,10 @@ html,body{
       margin: 45px 0px;
       font-size: 15px;
       color: #FFFFFF;
+      a{
+        color: #FFFFFF;
+        text-decoration: none;
+      }
     }
     &__message{
       font-size:11px;

@@ -13,4 +13,4 @@
         %li.group__name
           = link_to "#{group.group_name}", group_messages_path(group)
           .group__message
-            メッセージはありません
+            = group.messages.last

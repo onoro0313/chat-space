@@ -18,3 +18,5 @@
                 画像が送信されました。
               - elsif group.messages.last.body.present?
                 = group.messages.last.body
+              - elsif group.messages.nil?
+                まだ、メッセージが投稿されていません。

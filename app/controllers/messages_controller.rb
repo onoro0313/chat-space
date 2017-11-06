@@ -13,7 +13,7 @@ def create
   if @message.save
     redirect_to group_messages_path
   else
-    redirect_to group_messages_path,alert: "メッセージを入力してください。"
+    redirect_to group_messages_path, alert: "メッセージを入力してください。"
   end
 end
 

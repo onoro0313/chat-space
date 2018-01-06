@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
 
   def index
-    @groups = current_user.groups
+    @groups = current_user.groups.order("created_at DESC")
   end
 
   def new
@@ -24,7 +24,7 @@ class GroupsController < ApplicationController
   end
 
   def update
-    @group = Group.new(group_params)
+    @group = Group.find(params[:id])
     if @group.update(group_params)
       redirect_to root_path, notice: "グループを編集しました"
     else

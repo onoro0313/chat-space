@@ -43,6 +43,10 @@ html,body{
       margin: 45px 0px;
       font-size: 15px;
       color: #FFFFFF;
+      a{
+        color: #FFFFFF;
+        text-decoration: none;
+      }
     }
     &__message{
       font-size:11px;
@@ -94,7 +98,7 @@ html,body{
 .chat-body{
   height: calc(100% - 190px);
   border-top: solid 2px #eeeeee;
-  background-color: #eeeeee;
+  background-color: #ffffff;
   overflow: scroll;
   position: relative;
     .chat-messages{
@@ -133,7 +137,7 @@ html,body{
   }
   .chat-footer{
     // position: absolute;
-    background-color: #ddd;
+    background-color: #B8C3C7;
     height:50px;
     width: 1060px;
     padding: 20px 40px;
@@ -153,7 +157,7 @@ html,body{
           margin-left:-35px;
         }
         .file-picture{
-          display:none;
+          // display:none;
           width:20px;
           height:20px;
         }

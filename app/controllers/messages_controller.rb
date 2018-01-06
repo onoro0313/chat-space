@@ -11,9 +11,12 @@ def create
   @groups = current_user.groups
   @message = current_user.messages.new(message_params)
   if @message.save
-    redirect_to group_messages_path
+    respond_to do |format|
+      format.html {redirect_to group_messages_path}
+      format.json
+    end
   else
-    redirect_to group_messages_path, palert: "メッセージを入力してください。"
+    redirect_to group_messages_path, alert: "メッセージを入力してください。"
   end
 end
 

@@ -4,7 +4,7 @@ def index
   @group = Group.find(params[:group_id])
   @groups = current_user.groups.order("created_at DESC")
   @message = Message.new
-  @messages = Message.where(group_id: params[:group_id]).order("created_at DESC")
+  @messages = Message.where(group_id: params[:group_id]).order("created_at ASC")
 end
 
 def create

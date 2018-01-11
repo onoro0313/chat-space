@@ -1,5 +1,7 @@
 $(function(){
   function buildHtml(message){
+      // console.log(message);
+
     var html = `  <ul class='chat-messages'>
                       <li class='chat-message'>
                         <div class='chat-message__header'>
@@ -16,8 +18,13 @@ $(function(){
                       </li>
                   </ul>
 `
-    if (message.)
+    if (message.image.url){
+      html += `<p class="chat-message__text">
 
+                <img src="${message.image.thumb.url}">
+              </p>`
+    }
+    return html;
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -39,6 +46,15 @@ $(function(){
       var html = buildHtml(data);
       $('.chat-body').append(html);
       $('.chat-footer__input').val('');
+      $('.chat-body').animate({scrollTop: $(".chat-body")[0].scrollHeight}, "slow");
+      $('#new_message')[0].reset();
     })
-  })
-})
+
+    .fail(function(){
+      alert('error');
+    });
+
+    return false;}
+    // return false入れたら、jqueryが最初の一回以外にも起動するようになった、この理由が知りたい。
+  });
+});

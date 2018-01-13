@@ -54,7 +54,7 @@ $(function(){
       alert('error');
     });
 
-    return false;}
+    return false;
     // return false入れたら、jqueryが最初の一回以外にも起動するようになった、この理由が知りたい。
   });
 });
